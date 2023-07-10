@@ -80,7 +80,7 @@
 
         <EditProductForm v-if="isFormAddVisible" v-model:name="editedItem.record.name"
           v-model:quantity="editedItem.record.quantity" v-model:price="editedItem.record.price"
-          @save="submitNewProduct" @close="closeUpdateInput" />
+          @save="submitNewProduct" @close="closeInput()" />
         <tr>
           <td colspan="5">
             <!-- <hr /> -->
@@ -110,6 +110,9 @@
 import { ref, onMounted, computed } from 'vue'
 import EditProductForm from './EditProductForm.vue'
 
+ let showAddInput = ref(false) 
+
+
 interface Product {
   name: string
   quantity: number
@@ -119,7 +122,8 @@ interface Product {
 
 enum FormActions {
   ADD = 'add',
-  EDIT = 'edit'
+  EDIT = 'edit',
+  CLOSE = 'close'
 }
 
 interface EditedItem {
@@ -145,6 +149,7 @@ const editedItem = ref<EditedItem>({
 const isFormAddVisible = computed(() => {
   return editedItem.value.action === FormActions.ADD
 })
+
 const subtotal = computed(() => {
   let total = 0
   products.value.forEach((item) => {
@@ -203,8 +208,8 @@ function submitUpdate() {
   editedItem.value.record = { name: '', quantity: 0, price: 0, total: 0 }
 }
 
-function closeUpdateInput(){
-  FormActions.ADD = 'Close';
+function closeInput(){
+  editedItem.value.action = FormActions.CLOSE
 }
 // const deleteItem = (index: number) => {
 //   products.value.splice(index, 1)
