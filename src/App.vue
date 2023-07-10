@@ -10,12 +10,14 @@
   <main>
     <TheWelcome />
   </main>
-  <invoice />
+  <!-- <invoice /> -->
+  <test/>
 </template>
 
 <script setup lang="ts">
 
-import invoice from './components/invoice.vue'
+// import invoice from './components/invoice.vue'
+import test from './components/test.vue'
 </script>
 
 
