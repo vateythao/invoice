@@ -12,8 +12,9 @@
     <td>
       {{ subtotal }}
     </td>
-    <td>
+    <td  style="display: flex">
       <button @click="submitUpdate()" class="btn btn-primary btn-sm">Save</button>
+      <button @click="closeUpdate()" class="btn btn-primary btn-sm">Cancel</button>
     </td>
   </tr>
 </template>
@@ -47,4 +48,9 @@ function onInputPrice(event: any) {
 function submitUpdate() {
   emit('save')
 }
+
+function closeUpdate(){
+  emit('close')
+}
+
 </script>

@@ -80,7 +80,7 @@
 
         <EditProductForm v-if="isFormAddVisible" v-model:name="editedItem.record.name"
           v-model:quantity="editedItem.record.quantity" v-model:price="editedItem.record.price"
-          @save="submitNewProduct" />
+          @save="submitNewProduct" @close="closeUpdateInput" />
         <tr>
           <td colspan="5">
             <!-- <hr /> -->
@@ -203,6 +203,9 @@ function submitUpdate() {
   editedItem.value.record = { name: '', quantity: 0, price: 0, total: 0 }
 }
 
+function closeUpdateInput(){
+  FormActions.ADD = 'Close';
+}
 // const deleteItem = (index: number) => {
 //   products.value.splice(index, 1)
 // }
