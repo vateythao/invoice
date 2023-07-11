@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     
   <div class="container my-4">
     <h1 class="text-center mb-0" style="font-family: impact;">Vue Invoice</h1>
@@ -56,9 +56,9 @@
     </table>
 </div>
   
-</template>
+</template> -->
 
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import {ref, reactive, watchEffect} from 'vue'
 
 
@@ -174,7 +174,7 @@ defineExpose({
     margin-bottom: 40px;
   }
   
-</style>
+</style> -->
 
   
     

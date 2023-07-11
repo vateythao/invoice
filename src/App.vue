@@ -1,6 +1,6 @@
 <template>
   <header>
-   
+
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
@@ -11,7 +11,7 @@
     <TheWelcome />
   </main>
   <!-- <invoice /> -->
-  <test/>
+  <test />
 </template>
 
 <script setup lang="ts">
@@ -19,9 +19,6 @@
 // import invoice from './components/invoice.vue'
 import test from './components/test.vue'
 </script>
-
-
-
 
 <style scoped>
 header {

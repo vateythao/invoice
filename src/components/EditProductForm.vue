@@ -12,7 +12,7 @@
     <td>
       {{ subtotal }}
     </td>
-    <td  style="display: flex">
+    <td style="display: flex">
       <button @click="submitUpdate()" class="btn btn-primary btn-sm">Save</button>
       <button @click="closeUpdate()" class="btn btn-primary btn-sm">Cancel</button>
     </td>
@@ -33,7 +33,7 @@ const subtotal = computed(() => {
   //   return `$${(props.quantity * props.price).toFixed(2)}`
 })
 
-const emit = defineEmits(['update:name', 'update:quantity', 'update:price', 'save'])
+const emit = defineEmits(['update:name', 'update:quantity', 'update:price', 'save', 'close'])
 
 function onInputName(event: any) {
   emit('update:name', event.target.value)
@@ -49,7 +49,7 @@ function submitUpdate() {
   emit('save')
 }
 
-function closeUpdate(){
+function closeUpdate() {
   emit('close')
 }
 

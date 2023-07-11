@@ -133,10 +133,10 @@ interface EditedItem {
 }
 
 const products = ref<Product[]>([
-  { name: 'Coca', quantity: 3, price: 2, total: 5 },
+  { name: 'Coca', quantity: 3, price: 2, total: 6 },
   { name: 'Sprite', quantity: 2, price: 2, total: 4 },
-  { name: 'Fanta', quantity: 5, price: 2.5, total: 7.5 },
-  { name: 'Pepsi', quantity: 5, price: 2, total: 7 }
+  { name: 'Fanta', quantity: 5, price: 2.5, total: 12.5 },
+  { name: 'Pepsi', quantity: 5, price: 2, total: 10 }
 ])
 
 const editedItem = ref<EditedItem>({
